@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --color-brand: #0f2b48;
+  --color-brand-soft: #edf4fa;
+  --color-royal: #1d68a8;
+  --color-accent: #2563eb;
+  --color-positive: #059669;
+  --color-positive-soft: #ecfdf5;
+  --color-surface: #f8fafc;
+  --color-ink: #0f2b48;
+  --color-muted: #58697a;
+  --color-line: rgba(0, 0, 0, 0.06);
+}
+@layer base {
+  body { @apply m-0 bg-surface font-sans text-ink antialiased; }
+  button, a, select { -webkit-tap-highlight-color: transparent; }
+  button, select { cursor: pointer; }
+  button, input, textarea, select { font: inherit; }
+  label { @apply text-sm font-medium; }
+  input, select, textarea { min-width: 0; }
+  h1, h2, h3 { overflow-wrap: break-word; word-spacing: 0.04em; }
+  :focus-visible { @apply outline-2 outline-offset-4 outline-brand; }
+  main:focus { outline: none; }
+  svg.lucide { stroke-width: 1.5; }
+  ::selection { @apply bg-brand text-white; }
+}
+@layer components {
+  .hero-surface {
+    background-image: radial-gradient(ellipse at 90% 10%, rgba(29, 104, 168, 0.2), transparent 60%), radial-gradient(ellipse at 0% 95%, rgba(56, 189, 248, 0.06), transparent 50%);
+  }
+  .dark-surface :focus-visible { outline-color: #7dd3fc; }
+  .page { width: calc(100% - clamp(32px, 4vw, 96px)); margin-inline: auto; }
+  .section-space { padding-block: 40px; }
+  .footer-link { @apply flex min-h-11 items-center text-sm text-slate-300 transition-colors hover:text-sky-300; }
+  .faq-row summary { @apply flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 text-sm font-semibold sm:text-base; }
+  .faq-row summary::-webkit-details-marker { display: none; }
+  .faq-row[open] summary svg { transform: rotate(45deg); }
+  .eyebrow { @apply flex flex-wrap items-center gap-2 text-sm font-medium leading-6 text-muted; }
+  .btn { @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-lg px-5 py-3 text-sm font-semibold transition-colors; }
+  .btn-primary { @apply bg-royal text-white hover:bg-brand; }
+  .btn-outline { @apply border border-line bg-white text-ink hover:bg-surface; }
+  .btn-quiet { @apply text-ink hover:bg-surface; }
+  .nav-link { @apply inline-flex min-h-11 items-center transition-colors hover:text-brand; }
+  .text-link { @apply inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-royal hover:underline; }
+  .section-heading { @apply mb-8 flex flex-wrap items-end justify-between gap-4; }
+  .section-heading h2 { @apply text-3xl font-semibold leading-tight tracking-[-.02em] sm:text-[32px]; }
+  .page-title { @apply max-w-4xl text-4xl font-semibold leading-[1.2] tracking-[-.02em] sm:text-5xl; }
+  .intro { @apply mt-5 max-w-2xl text-base leading-8 text-muted; }
+  .input { @apply mt-2 block min-h-11 w-full rounded-lg border border-line bg-white px-3 py-3 text-base font-normal text-ink placeholder:text-muted focus:border-brand disabled:cursor-not-allowed disabled:bg-surface; }
+  .filter { @apply inline-flex min-h-11 items-center justify-center rounded-lg border border-line bg-white px-4 py-2 text-sm font-medium transition-colors hover:bg-surface; }
+  .filter.selected, .filter[aria-pressed='true'] { @apply border-brand bg-brand text-white; }
+  .skip-link { @apply fixed left-4 top-3 z-[100] -translate-y-24 rounded-md bg-brand px-5 py-3 text-sm text-white focus:translate-y-0; }
+}
+@media (min-width: 1024px) {
+  .section-space { padding-block: 64px; }
+}
+@media (max-width: 639px) {
+  .page { width: calc(100% - 32px); }
+  .responsive-table, .responsive-table tbody { display: block; width: 100%; }
+  .responsive-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .responsive-table tr { display: block; padding: 16px 0; }
+  .responsive-table td { display: block; max-width: none; padding: 8px 0; overflow-wrap: anywhere; }
+  .responsive-table td::before { content: attr(data-label); display: block; margin-bottom: 4px; font-size: 12px; font-weight: 500; color: var(--color-muted); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
