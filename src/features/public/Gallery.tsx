@@ -63,7 +63,6 @@ export default function Gallery() {
                     alt={photo.alt}
                     width="1000"
                     height="666"
-                    loading="lazy"
                     decoding="async"
                     className="aspect-[3/2] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                   />
