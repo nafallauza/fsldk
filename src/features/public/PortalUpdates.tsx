@@ -1,32 +1,96 @@
-import { ArrowUpRight, Plus } from 'lucide-react';
+import { ArrowUpRight, Plus, Shield, Users, Megaphone, BookOpen } from 'lucide-react';
 import { Link } from 'react-router';
 
-const improvements = [
-  ['01', 'Dokumentasi yang lebih bermakna', 'Situs referensi memiliki foto asli yang kuat, tetapi teks alternatif galeri masih berupa “Zoomed Image” dan nomor.', 'Foto arsip dipertahankan, diberi deskripsi sesuai isi, serta dapat diperbesar lewat dialog yang mendukung keyboard.'],
-  ['02', 'Pencarian yang membantu', 'Pada kode publik yang diperiksa, kolom dan tombol cari kegiatan belum memiliki penanganan input atau klik.', 'Pencarian judul dan lokasi terhubung ke hasil. Filter kategori, pesan hasil kosong, serta reset tersedia.'],
-  ['03', 'Navigasi yang mengikuti kebiasaan pengguna', 'Navigasi utama referensi menggunakan tombol untuk berpindah halaman.', 'Tautan memiliki alamat tujuan, penanda halaman aktif, dukungan buka tab baru, serta menu seluler yang bisa ditutup dengan Escape.'],
-  ['04', 'Konten tampil tanpa menunggu animasi panjang', 'Galeri referensi memiliki durasi animasi 1,8 detik per foto dengan jeda bertingkat hingga 3 detik.', 'Galeri tampil tanpa animasi masuk. Gambar di bawah layar dimuat saat diperlukan dan memiliki dimensi untuk menyediakan ruang sejak awal.'],
-  ['05', 'Struktur yang lebih konsisten', 'Markup data terstruktur referensi mengandung komentar sehingga tidak dapat dibaca sebagai JSON yang valid.', 'Portal ini memiliki markup WebSite yang valid, judul halaman yang mengikuti navigasi, dan pemisahan halaman publik dengan monitoring.'],
+const commissions = [
+  {
+    code: 'Komisi A',
+    title: 'Kelembagaan & Kaderisasi',
+    desc: 'Membina kapasitas kepemimpinan, tata kelola organisasi, dan standarisasi pembinaan kader di 43 LDK se-Bandung Raya.',
+    icon: Shield,
+  },
+  {
+    code: 'Komisi B',
+    title: 'Isu Keumatan & Kebangsaan',
+    desc: 'Mengawal isu kemahasiswaan, keumatan, dan kebangsaan melalui kajian strategis serta menangkal paham radikalisme dan ekstremisme.',
+    icon: BookOpen,
+  },
+  {
+    code: 'Komisi C',
+    title: 'Jaringan & Kemuslimahan',
+    desc: 'Mempererat silaturahmi lintas almamater dan menggerakkan pembinaan serta ruang berkarya bagi mahasiswi muslimah.',
+    icon: Users,
+  },
+  {
+    code: 'Komisi D',
+    title: 'Humas, Media & Syiar',
+    desc: 'Mengelola komunikasi publik, kemitraan media partner, dokumentasi gerakan, serta syiar digital yang edukatif.',
+    icon: Megaphone,
+  },
 ];
 
 export default function PortalUpdates() {
   return <>
-    <section id="pembaruan" className="page scroll-mt-8 border-y border-line">
-      <details className="faq-row py-2">
-        <summary><span className="text-lg">Apa yang diperbarui di portal ini?</span><Plus size={20} className="shrink-0 transition-transform" aria-hidden="true" /></summary>
-        <p className="mb-6 max-w-3xl text-sm leading-7 text-muted">Catatan berikut berasal dari pemeriksaan HTML dan aset publik situs referensi. Perbandingan performa di perangkat nyata belum dilakukan; fitur transaksi portal ini masih demo.</p>
-        <div className="grid gap-x-10 lg:grid-cols-2">{improvements.map(([number, title, before, after]) => <article key={number} className="border-t border-line py-6"><h3 className="text-base font-semibold">{title}</h3><p className="mt-3 text-sm leading-7 text-muted">{before}</p><p className="mt-3 text-sm leading-7">{after}</p></article>)}</div>
-        <Link to="/contact" className="text-link mb-6">Sampaikan masukan <ArrowUpRight size={17} /></Link>
-      </details>
+    <section id="komisi" className="page section-space scroll-mt-8 border-t border-line">
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">Struktur Pergerakan</p>
+          <h2 className="mt-2">Empat komisi yang menggerakkan kolaborasi.</h2>
+          <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
+            Puskomda FSLDK Bandung Raya bekerja melalui empat komisi fungsional yang didukung oleh 40 pengurus aktif dari berbagai perguruan tinggi.
+          </p>
+        </div>
+        <Link to="/about" className="text-link">Profil lengkap organisasi <ArrowUpRight size={17} /></Link>
+      </div>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {commissions.map(({ code, title, desc, icon: Icon }) => (
+          <article key={code} className="flex flex-col rounded-2xl border border-line bg-white p-6">
+            <div className="flex items-center justify-between">
+              <span className="rounded-md bg-brand-soft px-2.5 py-1 text-xs font-bold text-brand">{code}</span>
+              <Icon size={20} strokeWidth={1.75} className="text-royal" aria-hidden="true" />
+            </div>
+            <h3 className="mt-5 text-lg font-semibold tracking-tight">{title}</h3>
+            <p className="mt-2.5 text-sm leading-7 text-muted">{desc}</p>
+          </article>
+        ))}
+      </div>
     </section>
-    <section id="bantuan" className="page section-space scroll-mt-8 grid gap-8 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
-      <div><h2 className="text-3xl font-semibold tracking-tight">Pertanyaan umum.</h2><p className="mt-4 max-w-md text-sm leading-7 text-muted">Temukan agenda, kenali jejaring, atau masuk ke ruang pengurus sesuai kebutuhanmu.</p></div>
-      <div>{[
-        ['Bagaimana cara mengikuti agenda?', <>Buka <Link className="underline text-royal" to="/events">halaman agenda</Link>, pilih kegiatan, lalu baca tanggal dan lokasinya. Form pendaftaran saat ini masih simulasi dan belum mengirim data peserta.</>],
-        ['Untuk siapa portal monitoring disediakan?', <>Portal monitoring ditujukan untuk Admin Pusat dan pengurus LDK kampus. Versi saat ini memperagakan pencatatan kegiatan dan laporan melalui dua peran demo. Login server belum tersedia.</>],
-        ['Bagaimana mengajukan kolaborasi atau masukan?', <>Kunjungi <Link className="underline text-royal" to="/contact">halaman kontak</Link> untuk melihat alur pesan. Pengiriman masih simulasi; saluran resmi akan ditampilkan setelah diverifikasi pengurus.</>],
-        ['Apakah data kampus dan kegiatan sudah resmi?', <>Konten dan angka saat ini merupakan contoh untuk pengembangan portal. Nama kampus pada pita jejaring tidak sama dengan jumlah LDK yang tercatat pada data demo.</>],
-      ].map(([question, answer]) => <details className="faq-row border-b border-line" key={question as string}><summary>{question}<Plus size={18} className="shrink-0 transition-transform" aria-hidden="true" /></summary><div className="pb-6 pr-6 text-sm leading-7 text-muted">{answer}</div></details>)}</div>
+
+    <section id="bantuan" className="page section-space scroll-mt-8 grid gap-8 border-t border-line lg:grid-cols-[.75fr_1.25fr] lg:gap-16">
+      <div>
+        <p className="eyebrow">Informasi & Panduan</p>
+        <h2 className="mt-2 text-3xl font-semibold tracking-tight">Pertanyaan umum seputar FSLDK Baraya.</h2>
+        <p className="mt-4 max-w-md text-sm leading-7 text-muted">
+          Panduan singkat mengenai keanggotaan LDK, kolaborasi media partner, dan partisipasi agenda dakwah kampus.
+        </p>
+      </div>
+      <div>
+        {[
+          [
+            'Apa itu Puskomda FSLDK Bandung Raya?',
+            <>FSLDK Bandung Raya (Baraya) adalah forum koordinasi yang menghimpun <strong>43 Lembaga Dakwah Kampus</strong> di wilayah Bandung Raya untuk merawat harmoni dakwah kampus, membina mahasiswa, dan berkontribusi menuju Indonesia Emas 2045.</>,
+          ],
+          [
+            'Bagaimana cara mengajukan kerja sama Media Partner atau Humas?',
+            <>Anda dapat menghubungi narahubung resmi Komisi D pada <Link className="underline text-royal font-medium" to="/contact">halaman Kontak</Link>: Teh Dini untuk Media Partner, Kang Fikri untuk Bidang Humas, atau Kang Uki untuk Bidang Isu.</>,
+          ],
+          [
+            'Apakah mahasiswa umum dapat mengikuti agenda kajian dan pelatihan?',
+            <>Sebagian besar agenda seperti Simposium Kebangsaan dan Kajian Terbuka dapat diikuti oleh seluruh mahasiswa Bandung Raya, sedangkan Rapimda dan Sekolah Pemimpin dikhususkan bagi delegasi pengurus LDK.</>,
+          ],
+          [
+            'Di mana lokasi Sekretariat FSLDK Bandung Raya?',
+            <>Sekretariat Puskomda FSLDK Bandung Raya bertempat di <strong>Lt. Dasar Masjid Ikomah UIN Sunan Gunung Djati</strong>, Jl. A.H. Nasution No. 105, Cibiru, Kota Bandung 40614.</>,
+          ],
+        ].map(([question, answer]) => (
+          <details className="faq-row border-b border-line" key={question as string}>
+            <summary>
+              {question}
+              <Plus size={18} className="shrink-0 transition-transform" aria-hidden="true" />
+            </summary>
+            <div className="pb-6 pr-6 text-sm leading-7 text-muted">{answer}</div>
+          </details>
+        ))}
+      </div>
     </section>
   </>;
 }
