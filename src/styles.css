@@ -2,15 +2,15 @@
 
 @theme {
   --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
-  --color-brand: #0f2b48;
-  --color-brand-soft: #edf4fa;
-  --color-royal: #1d68a8;
-  --color-accent: #2563eb;
-  --color-positive: #059669;
+  --color-brand: #09261a;
+  --color-brand-soft: #ecfdf5;
+  --color-royal: #0a9346;
+  --color-accent: #e5222c;
+  --color-positive: #0a9346;
   --color-positive-soft: #ecfdf5;
   --color-surface: #f8fafc;
-  --color-ink: #0f2b48;
-  --color-muted: #58697a;
+  --color-ink: #0d281e;
+  --color-muted: #4a5d52;
   --color-line: rgba(0, 0, 0, 0.06);
 }
 @layer base {
@@ -28,12 +28,12 @@
 }
 @layer components {
   .hero-surface {
-    background-image: radial-gradient(ellipse at 90% 10%, rgba(29, 104, 168, 0.2), transparent 60%), radial-gradient(ellipse at 0% 95%, rgba(56, 189, 248, 0.06), transparent 50%);
+    background-image: radial-gradient(ellipse at 90% 10%, rgba(10, 147, 70, 0.22), transparent 60%), radial-gradient(ellipse at 0% 95%, rgba(16, 185, 129, 0.08), transparent 50%);
   }
-  .dark-surface :focus-visible { outline-color: #7dd3fc; }
+  .dark-surface :focus-visible { outline-color: #34d399; }
   .page { width: calc(100% - clamp(32px, 4vw, 96px)); margin-inline: auto; }
   .section-space { padding-block: 40px; }
-  .footer-link { @apply flex min-h-11 items-center text-sm text-slate-300 transition-colors hover:text-sky-300; }
+  .footer-link { @apply flex min-h-11 items-center text-sm text-slate-300 transition-colors hover:text-emerald-300; }
   .faq-row summary { @apply flex min-h-16 cursor-pointer list-none items-center justify-between gap-5 py-5 text-sm font-semibold sm:text-base; }
   .faq-row summary::-webkit-details-marker { display: none; }
   .faq-row[open] summary svg { transform: rotate(45deg); }

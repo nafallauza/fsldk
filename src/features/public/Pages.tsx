@@ -8,9 +8,9 @@ export function About() {
   return <>
     <section className="page section-space">
       <p className="eyebrow">Profil Organisasi</p>
-      <h1 className="page-title mt-2">Tentang FSLDK Bandung Raya</h1>
+      <h1 className="page-title mt-2">Tentang FSLDK Yogyakarta</h1>
       <p className="intro">
-        FSLDK BARAYA (Forum Silaturahim Lembaga Dakwah Kampus) se-Bandung Raya merupakan forum koordinasi lembaga dakwah di kampus-kampus se-Bandung Raya sebagai sarana terciptanya dakwah kampus yang harmoni dalam mencapai Indonesia Emas 2045 serta menjaga semangat kebangsaan dari paham-paham radikalisme dan ekstremisme.
+        FSLDK JOGJA (Forum Silaturahim Lembaga Dakwah Kampus) se-Daerah Istimewa Yogyakarta merupakan forum koordinasi lembaga dakwah di kampus-kampus se-D.I. Yogyakarta sebagai sarana terciptanya dakwah kampus yang harmoni dalam mencapai Indonesia Emas 2045 serta menjaga semangat kebangsaan dari paham-paham radikalisme dan ekstremisme.
       </p>
 
       <dl className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -32,13 +32,13 @@ export function About() {
         <div className="rounded-2xl border border-line bg-white p-6 sm:p-9">
           <h2 className="text-xl font-bold">Peran & Pembinaan Mahasiswa</h2>
           <p className="mt-4 text-sm leading-8 text-muted">
-            FSLDK Bandung Raya menjadi wadah strategis untuk mengedukasi dan membina mahasiswa agar mampu menghadapi tantangan zaman seperti pergaulan bebas, penyalahgunaan obat-obatan terlarang, radikalisme, dan ekstremisme melalui pendekatan intelektual dan ukhuwah.
+            FSLDK Yogyakarta menjadi wadah strategis untuk mengedukasi dan membina mahasiswa agar mampu menghadapi tantangan zaman seperti pergaulan bebas, penyalahgunaan obat-obatan terlarang, radikalisme, dan ekstremisme melalui pendekatan intelektual dan ukhuwah.
           </p>
         </div>
         <div className="rounded-2xl bg-brand p-6 text-white sm:p-9">
           <h2 className="text-xl font-bold">Pengawalan Isu Keumatan & Kebangsaan</h2>
           <p className="mt-4 text-base leading-8 text-slate-200">
-            Menjawab tantangan globalisasi, modernisasi, dan perkembangan teknologi, serta mengawal isu-isu keumatan, kebangsaan, dan kemahasiswaan secara kolaboratif bersama seluruh LDK di Bandung Raya.
+            Menjawab tantangan globalisasi, modernisasi, dan perkembangan teknologi, serta mengawal isu-isu keumatan, kebangsaan, dan kemahasiswaan secara kolaboratif bersama seluruh LDK di Yogyakarta.
           </p>
         </div>
       </div>
@@ -47,7 +47,7 @@ export function About() {
         <div className="section-heading">
           <div>
             <p className="eyebrow">Direktori Anggota</p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight">Representasi dari 43 LDK se-Bandung Raya.</h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight">Representasi dari 43 LDK se-Daerah Istimewa Yogyakarta.</h2>
           </div>
           <Link to="/dashboard/ldks" className="text-link">Lihat di Portal LDK <ArrowUpRight size={17} /></Link>
         </div>
@@ -71,11 +71,11 @@ export function Contact() {
   return (
     <section className="page section-space">
       <p className="eyebrow">Saluran Resmi</p>
-      <h1 className="page-title mt-2">Hubungi Puskomda FSLDK Baraya</h1>
+      <h1 className="page-title mt-2">Hubungi Puskomda FSLDK Jogja</h1>
       <div className="mt-10 grid items-start gap-8 lg:grid-cols-[.95fr_1.05fr] lg:gap-14">
         <div className="space-y-6">
           <p className="intro !mt-0">
-            Terbuka untuk pengajuan Media Partner, undangan delegasi kampus, diskusi isu keumatan, maupun kolaborasi kegiatan se-Bandung Raya.
+            Terbuka untuk pengajuan Media Partner, undangan delegasi kampus, diskusi isu keumatan, maupun kolaborasi kegiatan se-Daerah Istimewa Yogyakarta.
           </p>
 
           <div className="grid gap-3">
@@ -119,7 +119,7 @@ export function Contact() {
             <div role="status">
               <h2 className="text-xl font-semibold text-brand">Pesan Anda telah dicatat.</h2>
               <p className="my-4 text-sm leading-7 text-muted">
-                Terima kasih telah menghubungi Puskomda FSLDK Bandung Raya. Untuk respon cepat terkait Media Partner atau Humas, silakan hubungi narahubung WhatsApp di samping.
+                Terima kasih telah menghubungi Puskomda FSLDK Yogyakarta. Untuk respon cepat terkait Media Partner atau Humas, silakan hubungi narahubung WhatsApp di samping.
               </p>
               <button type="button" className="btn btn-outline" onClick={() => setSent(false)}>Kirim pesan lain</button>
             </div>

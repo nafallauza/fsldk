@@ -5,17 +5,17 @@ const photos = [
   {
     src: '/images/fsldk-pelantikan.jpg',
     title: 'Simposium Kebangsaan & Pelantikan Pengurus',
-    alt: 'Foto bersama peserta Simposium Kebangsaan dan Pelantikan Pengurus FSLDK Baraya periode 2024–2026',
+    alt: 'Foto bersama peserta Simposium Kebangsaan dan Pelantikan Pengurus FSLDK Yogyakarta periode 2024–2026',
   },
   {
     src: '/images/fsldk-kebersamaan.jpg',
-    title: 'Sinergi Pengurus Puskomda FSLDK Baraya',
-    alt: 'Pengurus FSLDK Bandung Raya berfoto di depan spanduk pelantikan',
+    title: 'Sinergi Pengurus Puskomda FSLDK Jogja',
+    alt: 'Pengurus FSLDK Yogyakarta berfoto bersama seusai agenda konsolidasi',
   },
   {
     src: '/images/galeri-3.jpg',
     title: 'Forum Diskusi & Konsolidasi Lintas Kampus',
-    alt: 'Suasana diskusi dan pemaparan program kerja pengurus LDK se-Bandung Raya',
+    alt: 'Suasana diskusi dan pemaparan program kerja pengurus LDK se-Daerah Istimewa Yogyakarta',
   },
   {
     src: '/images/galeri-4.jpg',
@@ -24,13 +24,13 @@ const photos = [
   },
   {
     src: '/images/galeri-5.jpg',
-    title: 'Silaturahmi Delegasi LDK Bandung Raya',
+    title: 'Silaturahmi Delegasi LDK Yogyakarta',
     alt: 'Pertemuan delegasi lembaga dakwah kampus dalam agenda daerah',
   },
   {
     src: '/images/galeri-6.jpg',
     title: 'Kolaborasi Komisi & Penguatan Ukhuwah',
-    alt: 'Kebersamaan pengurus aktif Puskomda FSLDK Bandung Raya usai kegiatan',
+    alt: 'Kebersamaan pengurus aktif Puskomda FSLDK Yogyakarta usai kegiatan',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Gallery() {
           <p className="eyebrow">Galeri Gerakan</p>
           <h2 className="mt-2">Ukhuwah yang hadir dalam karya nyata.</h2>
           <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
-            Rekam jejak kegiatan, simposium kebangsaan, dan konsolidasi pengurus Puskomda FSLDK Bandung Raya.
+            Rekam jejak kegiatan, simposium kebangsaan, dan konsolidasi pengurus Puskomda FSLDK Yogyakarta.
           </p>
         </div>
       </div>

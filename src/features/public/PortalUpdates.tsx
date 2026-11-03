@@ -5,7 +5,7 @@ const commissions = [
   {
     code: 'Komisi A',
     title: 'Kelembagaan & Kaderisasi',
-    desc: 'Membina kapasitas kepemimpinan, tata kelola organisasi, dan standarisasi pembinaan kader di 43 LDK se-Bandung Raya.',
+    desc: 'Membina kapasitas kepemimpinan, tata kelola organisasi, dan standarisasi pembinaan kader di 43 LDK se-Daerah Istimewa Yogyakarta.',
     icon: Shield,
   },
   {
@@ -36,7 +36,7 @@ export default function PortalUpdates() {
           <p className="eyebrow">Struktur Pergerakan</p>
           <h2 className="mt-2">Empat komisi yang menggerakkan kolaborasi.</h2>
           <p className="mt-3 max-w-2xl text-base leading-7 text-muted">
-            Puskomda FSLDK Bandung Raya bekerja melalui empat komisi fungsional yang didukung oleh 40 pengurus aktif dari berbagai perguruan tinggi.
+            Puskomda FSLDK Yogyakarta bekerja melalui empat komisi fungsional yang didukung oleh 40 pengurus aktif dari berbagai perguruan tinggi.
           </p>
         </div>
         <Link to="/about" className="text-link">Profil lengkap organisasi <ArrowUpRight size={17} /></Link>
@@ -58,7 +58,7 @@ export default function PortalUpdates() {
     <section id="bantuan" className="page section-space scroll-mt-8 grid gap-8 border-t border-line lg:grid-cols-[.75fr_1.25fr] lg:gap-16">
       <div>
         <p className="eyebrow">Informasi & Panduan</p>
-        <h2 className="mt-2 text-3xl font-semibold tracking-tight">Pertanyaan umum seputar FSLDK Baraya.</h2>
+        <h2 className="mt-2 text-3xl font-semibold tracking-tight">Pertanyaan umum seputar FSLDK Jogja.</h2>
         <p className="mt-4 max-w-md text-sm leading-7 text-muted">
           Panduan singkat mengenai keanggotaan LDK, kolaborasi media partner, dan partisipasi agenda dakwah kampus.
         </p>
@@ -66,20 +66,20 @@ export default function PortalUpdates() {
       <div>
         {[
           [
-            'Apa itu Puskomda FSLDK Bandung Raya?',
-            <>FSLDK Bandung Raya (Baraya) adalah forum koordinasi yang menghimpun <strong>43 Lembaga Dakwah Kampus</strong> di wilayah Bandung Raya untuk merawat harmoni dakwah kampus, membina mahasiswa, dan berkontribusi menuju Indonesia Emas 2045.</>,
+            'Apa itu Puskomda FSLDK Yogyakarta?',
+            <>FSLDK Yogyakarta (Jogja) adalah forum koordinasi yang menghimpun <strong>43 Lembaga Dakwah Kampus</strong> di wilayah D.I. Yogyakarta untuk merawat harmoni dakwah kampus, membina mahasiswa, dan berkontribusi menuju Indonesia Emas 2045.</>,
           ],
           [
             'Bagaimana cara mengajukan kerja sama Media Partner atau Humas?',
-            <>Anda dapat menghubungi narahubung resmi Komisi D pada <Link className="underline text-royal font-medium" to="/contact">halaman Kontak</Link>: Teh Dini untuk Media Partner, Kang Fikri untuk Bidang Humas, atau Kang Uki untuk Bidang Isu.</>,
+            <>Anda dapat menghubungi narahubung resmi Komisi D pada <Link className="underline text-royal font-medium" to="/contact">halaman Kontak</Link>: Mbak Dini untuk Media Partner, Mas Fikri untuk Bidang Humas, atau Mas Uki untuk Bidang Isu.</>,
           ],
           [
             'Apakah mahasiswa umum dapat mengikuti agenda kajian dan pelatihan?',
-            <>Sebagian besar agenda seperti Simposium Kebangsaan dan Kajian Terbuka dapat diikuti oleh seluruh mahasiswa Bandung Raya, sedangkan Rapimda dan Sekolah Pemimpin dikhususkan bagi delegasi pengurus LDK.</>,
+            <>Sebagian besar agenda seperti Simposium Kebangsaan dan Kajian Terbuka dapat diikuti oleh seluruh mahasiswa Yogyakarta, sedangkan Rapimda dan Sekolah Pemimpin dikhususkan bagi delegasi pengurus LDK.</>,
           ],
           [
-            'Di mana lokasi Sekretariat FSLDK Bandung Raya?',
-            <>Sekretariat Puskomda FSLDK Bandung Raya bertempat di <strong>Lt. Dasar Masjid Ikomah UIN Sunan Gunung Djati</strong>, Jl. A.H. Nasution No. 105, Cibiru, Kota Bandung 40614.</>,
+            'Di mana lokasi Sekretariat FSLDK Yogyakarta?',
+            <>Sekretariat Puskomda FSLDK Daerah Istimewa Yogyakarta bertempat di <strong>Kompleks Masjid Kampus UGM</strong>, Bulaksumur, Sleman, D.I. Yogyakarta 55281.</>,
           ],
         ].map(([question, answer]) => (
           <details className="faq-row border-b border-line" key={question as string}>

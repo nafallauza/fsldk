@@ -10,20 +10,20 @@ export default function Hero() {
   const spotlight = upcoming[0] ?? [...events].sort((a, b) => Date.parse(b.startsAt) - Date.parse(a.startsAt))[0];
 
   return <>
-    <section className="hero-surface dark-surface bg-[#0c1a2e] text-white" aria-labelledby="hero-title">
+    <section className="hero-surface dark-surface bg-[#061a12] text-white" aria-labelledby="hero-title">
       <div className="page section-space grid items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
         <div>
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium tracking-wide text-sky-300">
-            PUSKOMDA FSLDK BANDUNG RAYA
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium tracking-wide text-emerald-300">
+            PUSKOMDA FSLDK YOGYAKARTA
           </p>
           <h1 id="hero-title" className="max-w-[820px] text-[clamp(2.25rem,3.6vw,4.25rem)] font-bold leading-[1.12] tracking-[-.025em] [text-wrap:balance]">
-            Merajut Ukhuwah, Menggerakkan Peradaban <span className="text-sky-400">dari Kampus.</span>
+            Merajut Ukhuwah, Menggerakkan Peradaban <span className="text-emerald-400">dari Kampus.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            Forum koordinasi Lembaga Dakwah Kampus se-Bandung Raya sebagai sarana terciptanya dakwah kampus yang harmoni menuju Indonesia Emas 2045 serta menjaga semangat kebangsaan.
+            Forum koordinasi Lembaga Dakwah Kampus se-Daerah Istimewa Yogyakarta sebagai sarana terciptanya dakwah kampus yang harmoni menuju Indonesia Emas 2045 serta menjaga semangat kebangsaan.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link className="btn bg-sky-400 text-slate-950 hover:bg-sky-300" to="/about#jejaring">
+            <Link className="btn bg-[#0a9346] text-white hover:bg-[#077035]" to="/about#jejaring">
               Jelajahi 43 LDK <ArrowUpRight size={17} aria-hidden="true" />
             </Link>
             <Link className="btn border border-white/20 bg-white/5 text-white hover:bg-white/10" to="/contact">
@@ -37,7 +37,7 @@ export default function Hero() {
             </div>
             <div>
               <dt className="text-xs text-slate-300">Komisi Kerja</dt>
-              <dd className="mt-1.5 text-3xl font-bold tracking-tight text-sky-400">{orgStats.commissions}<span className="ml-1.5 text-xs font-medium text-slate-300">komisi</span></dd>
+              <dd className="mt-1.5 text-3xl font-bold tracking-tight text-emerald-400">{orgStats.commissions}<span className="ml-1.5 text-xs font-medium text-slate-300">komisi</span></dd>
             </div>
             <div>
               <dt className="text-xs text-slate-300">Pengurus Aktif</dt>
@@ -54,7 +54,7 @@ export default function Hero() {
               height="992"
               fetchPriority="high"
               decoding="async"
-              alt="Pelantikan dan Simposium Kebangsaan Pengurus Puskomda FSLDK Bandung Raya"
+              alt="Pelantikan dan Simposium Kebangsaan Pengurus Puskomda FSLDK Yogyakarta"
               className="block aspect-[3/2] w-full object-cover"
             />
             {spotlight && (
@@ -62,10 +62,10 @@ export default function Hero() {
                 <div className="flex items-start gap-4">
                   <time dateTime={spotlight.startsAt} className="grid min-w-16 shrink-0 gap-1 rounded-lg bg-white/10 px-3 py-3 text-center">
                     <span className="text-2xl font-semibold leading-none">{dateLabel(spotlight.startsAt, { day: '2-digit' })}</span>
-                    <span className="text-xs text-sky-200">{dateLabel(spotlight.startsAt, { month: 'short' })}</span>
+                    <span className="text-xs text-emerald-200">{dateLabel(spotlight.startsAt, { month: 'short' })}</span>
                   </time>
                   <div className="min-w-0">
-                    <p className="text-xs text-sky-300">{upcoming.length ? 'Agenda Terdekat' : 'Sorotan Kegiatan'} · {spotlight.category}</p>
+                    <p className="text-xs text-emerald-300">{upcoming.length ? 'Agenda Terdekat' : 'Sorotan Kegiatan'} · {spotlight.category}</p>
                     <h2 id="spotlight-title" className="mt-1.5 text-lg font-semibold leading-7">{spotlight.title}</h2>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function Hero() {
                   <p className="flex items-center gap-2 text-xs leading-6 text-slate-300">
                     <MapPin size={15} className="shrink-0" aria-hidden="true" />{spotlight.location}
                   </p>
-                  <Link className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-sky-300 hover:text-white" to={`/e/${spotlight.slug}`}>
+                  <Link className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-emerald-300 hover:text-white" to={`/e/${spotlight.slug}`}>
                     Detail agenda <ArrowUpRight size={17} aria-hidden="true" />
                   </Link>
                 </div>
@@ -81,7 +81,7 @@ export default function Hero() {
             )}
           </div>
           <p className="mt-3 text-right text-xs text-slate-400">
-            Pelantikan & Simposium Kebangsaan Pengurus FSLDK Bandung Raya
+            Dokumentasi Pengurus Puskomda FSLDK Yogyakarta
           </p>
         </div>
       </div>
