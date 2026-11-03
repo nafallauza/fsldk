@@ -17,7 +17,7 @@ export function Brand({ inverse = false }: { inverse?: boolean }) {
       />
       <span className={`text-xl font-extrabold tracking-tight ${inverse ? 'text-white' : 'text-brand'}`}>
         FSLDK<span className={`ml-0.5 ${inverse ? 'text-emerald-400' : 'text-royal'}`}>.</span>
-        <span className={`mt-0.5 block text-[10px] font-semibold uppercase tracking-[.16em] ${inverse ? 'text-slate-300' : 'text-muted'}`}>
+        <span className={`mt-0.5 block text-[10px] font-semibold uppercase tracking-[.16em] ${inverse ? 'text-emerald-200/70' : 'text-muted'}`}>
           Yogyakarta
         </span>
       </span>
@@ -53,12 +53,12 @@ export default function PublicLayout() {
         <Brand inverse={dark} />
         <nav aria-label="Navigasi utama" className="hidden items-center gap-7 text-sm font-medium lg:flex">
           {navigation.map(([to, label]) => (
-            <NavLink key={to} to={to} className={({ isActive }) => `nav-link ${dark ? `hover:text-emerald-300 ${isActive ? 'font-semibold text-emerald-300' : 'text-slate-300'}` : isActive ? 'font-semibold text-royal' : 'text-muted'}`}>
+            <NavLink key={to} to={to} className={({ isActive }) => `nav-link ${dark ? `hover:text-emerald-300 ${isActive ? 'font-semibold text-emerald-300' : 'text-emerald-100/80'}` : isActive ? 'font-semibold text-royal' : 'text-muted'}`}>
               {label}
             </NavLink>
           ))}
         </nav>
-        <Link className={`btn ml-auto hidden sm:flex lg:ml-0 ${dark ? 'border border-white/20 bg-white/5 text-white hover:bg-white/10' : 'btn-outline'}`} to="/dashboard">
+        <Link className={`btn ml-auto hidden sm:flex lg:ml-0 ${dark ? 'border border-emerald-500/20 bg-emerald-950/40 text-white hover:bg-emerald-900/40' : 'btn-outline'}`} to="/dashboard">
           Portal LDK <ArrowUpRight size={16} aria-hidden="true" />
         </Link>
         <button ref={menuButton} className="grid size-11 place-items-center lg:hidden" aria-label={open ? 'Tutup navigasi' : 'Buka navigasi'} aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen(!open)}>
@@ -66,9 +66,9 @@ export default function PublicLayout() {
         </button>
       </div>
       {open && (
-        <nav id="mobile-nav" aria-label="Navigasi seluler" className={`page grid border-t pb-5 lg:hidden ${dark ? 'border-white/10' : 'border-line'}`}>
+        <nav id="mobile-nav" aria-label="Navigasi seluler" className={`page grid border-t pb-5 lg:hidden ${dark ? 'border-emerald-500/20' : 'border-line'}`}>
           {[...navigation, ['/dashboard', 'Portal LDK']].map(([to, label]) => (
-            <NavLink onClick={() => setOpen(false)} className={`flex min-h-12 items-center border-b text-sm ${dark ? 'border-white/10 text-slate-200 hover:text-emerald-300' : 'border-line'}`} to={to} key={to}>
+            <NavLink onClick={() => setOpen(false)} className={`flex min-h-12 items-center border-b text-sm ${dark ? 'border-emerald-500/15 text-emerald-100 hover:text-emerald-300' : 'border-line'}`} to={to} key={to}>
               {label}
             </NavLink>
           ))}
@@ -76,15 +76,15 @@ export default function PublicLayout() {
       )}
     </header>
     <main id="main" tabIndex={-1}><Outlet /></main>
-    <footer className="dark-surface bg-[#061a12] text-white">
+    <footer className="dark-surface border-t border-emerald-500/20 bg-[#061a12] text-white">
       <div className="page">
-        <div className="grid grid-cols-2 gap-x-6 gap-y-8 border-b border-white/10 py-10 lg:grid-cols-[1.5fr_1fr_1fr_1.1fr] lg:gap-10 lg:py-12">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 border-b border-emerald-500/15 py-10 lg:grid-cols-[1.5fr_1fr_1fr_1.1fr] lg:gap-10 lg:py-12">
           <div className="col-span-2 lg:col-span-1">
             <Brand inverse />
-            <p className="mt-5 max-w-sm text-sm leading-7 text-slate-300">
+            <p className="mt-5 max-w-sm text-sm leading-7 text-emerald-100/75">
               Pusat Komunikasi Daerah Forum Silaturahim Lembaga Dakwah Kampus se-Daerah Istimewa Yogyakarta. Merawat harmoni dakwah kampus menuju Indonesia Emas 2045.
             </p>
-            <p className="mt-4 text-xs leading-6 text-slate-400">{contactInfo.address}</p>
+            <p className="mt-4 text-xs leading-6 text-emerald-300/60">{contactInfo.address}</p>
           </div>
           <nav aria-label="Footer organisasi">
             <h2 className="mb-4 text-sm font-semibold text-white">Organisasi</h2>
@@ -103,17 +103,17 @@ export default function PublicLayout() {
           </nav>
           <div className="col-span-2 lg:col-span-1">
             <h2 className="mb-4 text-sm font-semibold text-white">Sekretariat & Kontak</h2>
-            <p className="text-sm leading-7 text-slate-300">{contactInfo.pic}</p>
+            <p className="text-sm leading-7 text-emerald-100/75">{contactInfo.pic}</p>
             <a href={`mailto:${contactInfo.email}`} className="mt-1 block text-xs text-emerald-300 hover:underline">{contactInfo.email}</a>
-            <Link to="/dashboard" className="btn mt-5 w-full justify-between border border-white/20 text-white hover:bg-white/10">
+            <Link to="/dashboard" className="btn mt-5 w-full justify-between border border-emerald-500/20 bg-emerald-950/30 text-white hover:bg-emerald-900/40">
               Portal Monitoring LDK <ArrowUpRight size={16} aria-hidden="true" />
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-4 py-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-4 py-6 text-xs text-emerald-300/60 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Puskomda FSLDK Yogyakarta. Hak cipta dilindungi.</p>
           <p className="max-w-lg leading-6">Kolaborasi 43 Lembaga Dakwah Kampus se-Daerah Istimewa Yogyakarta</p>
-          <a href="#site-header" className="inline-flex min-h-11 items-center gap-2 text-slate-200 hover:text-emerald-300">
+          <a href="#site-header" className="inline-flex min-h-11 items-center gap-2 text-emerald-200 hover:text-emerald-300">
             Kembali ke atas <ArrowUpRight size={15} aria-hidden="true" />
           </a>
         </div>

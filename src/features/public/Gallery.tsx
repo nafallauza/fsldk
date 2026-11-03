@@ -66,7 +66,7 @@ export default function Gallery() {
                     decoding="async"
                     className="aspect-[3/2] w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
                   />
-                  <span className="absolute bottom-3 right-3 grid size-10 place-items-center rounded-lg border border-white/20 bg-slate-950/75 text-white transition-colors group-hover:bg-brand">
+                  <span className="absolute bottom-3 right-3 grid size-10 place-items-center rounded-lg border border-emerald-500/30 bg-black/80 text-white transition-colors group-hover:bg-[#0a9346]">
                     <Expand size={17} aria-hidden="true" />
                   </span>
                 </button>
